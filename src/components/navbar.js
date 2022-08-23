@@ -1,9 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import CartWidget from "./Cart/CartWidget";
 
-function Navi() {
+function Navbar() {
     return (
+    <React.Fragment>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
         <div className="container-fluid">
         <a className="navbar-brand" href="../index.html">LOA Shop</a>
@@ -24,6 +26,7 @@ function Navi() {
             <li className="nav-item">
                 <a className="nav-link" href="./galeria.html" >Galeria</a>
             </li>
+            
             <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mas</a>
                 <div className="dropdown-menu">
@@ -31,11 +34,15 @@ function Navi() {
                 <a className="dropdown-item" href="./contacto.html">Contacto</a>
                 </div>
             </li>
+            <li>
+                <CartWidget></CartWidget>
+            </li>
             </ul>
         </div>
         </div>
     </nav>
+    </React.Fragment>
     );
 }
 
-export default Navi;
+export default Navbar;
