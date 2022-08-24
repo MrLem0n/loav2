@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
           <Navbar></Navbar>
-          <ItemListContainer></ItemListContainer>
+          <ItemListContainer mensaje="Hola, soy un mensaje"></ItemListContainer>
       </header>
     
     </div>
