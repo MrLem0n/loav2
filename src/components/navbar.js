@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import CartWidget from "./Cart/CartWidget";
+import CartWidget from "./icons/CartWidget";
 
 function Navbar() {
     return (

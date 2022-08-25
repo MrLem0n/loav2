@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from'./components/navbar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import WidgetCart from './components/Cart/CartWidget';
+import Contador from './components/contador/ItemCount';
 import ItemListContainer from './components/ItemListContainer'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
           <Navbar></Navbar>
           <ItemListContainer mensaje="Hola, soy un mensaje"></ItemListContainer>
       </header>
-    
+    <Contador limit={0}/>
     </div>
   );
 }
