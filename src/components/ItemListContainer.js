@@ -6,7 +6,7 @@ function ItemListContainer(props) {
     return (
       <div className="container">
         <p>{mensaje}</p>
-    <ItemCount limit={0}/>
+    <ItemCount limit={0} stock={10}/>
       </div>
     );
   }

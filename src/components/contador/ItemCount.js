@@ -1,13 +1,13 @@
 import {useState} from 'react';
 
- const Contador = (props) => {
+ const ItemCount = (props) => {
 
     const limit = props.limit;
 
     const [contador, setContador] = useState(0);
 
     const incrementar = ()=> {
-        if (contador >= limit) {
+        if (contador >= limit & contador <props.stock) {
             setContador(contador + 1) 
         }
         
@@ -32,4 +32,4 @@ import {useState} from 'react';
     )
 }
 
-export default Contador;
+export default ItemCount;
