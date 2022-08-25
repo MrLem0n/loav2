@@ -1,3 +1,4 @@
+import ItemCount from './contador/ItemCount';
 
 function ItemListContainer(props) {
   console.log(props.mensaje);
@@ -5,7 +6,7 @@ function ItemListContainer(props) {
     return (
       <div className="container">
         <p>{mensaje}</p>
-    
+    <ItemCount limit={0}/>
       </div>
     );
   }
