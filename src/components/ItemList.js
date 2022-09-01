@@ -7,33 +7,33 @@ const arregloProductos = [
     nombre: "Honor Shard Pouch (S)",
     precio : 9,
     cantidad: 50,
-    img: "./imagenes/Honor Shard Pouch (S)"
+    img: "../imagenes/Honor Shard Pouch (S).jpg"
 },
 {
     nombre: "Honor Shard Pouch (M)",
     precio : 18,
     cantidad: 50,
-    img: "./imagenes/Honor Shard Pouch (M)"
+    img: "../imagenes/Honor Shard Pouch (M).jpg"
 },
 { 
     nombre: "Honor Shard Pouch (L)",
     precio : 36,
     cantidad: 50,
-    img: "./imagenes/Honor Shard Pouch (L)"
+    img: "../imagenes/Honor Shard Pouch (L).jpg"
 
 },
 {
     nombre: "Harmony Shard Pouch (S)",
     precio : 42,
     cantidad: 50,
-    img: "./imagenes/Harmony Shard Pouch (S)"
+    img: "../imagenes/Harmony Shard Pouch (S).jpg"
 
 },
 {
     nombre: "Harmony Shard Pouch (M)",
     precio : 85,
     cantidad: 50,
-    img: "./imagenes/Harmony Shard Pouch (M)"
+    img: "../imagenes/Harmony Shard Pouch (M).jpg"
 },
 ]
 
