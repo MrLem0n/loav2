@@ -15,7 +15,7 @@ import {useState} from 'react';
 
     const decrementar = ()=> {
         if (contador > limit) {
-            setContador(contador -1)
+            setContador(contador - 1)
         }
         
     }
