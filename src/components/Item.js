@@ -1,16 +1,17 @@
 import React from "react";
+import ItemCount from './contador/ItemCount';
 
-const Item = ({prod}) => {
+export const Item = ({producto}) => {
     return (
       
-    <div class="card" >
-        <div class="card-body">
-        <h5 class= "card-tittle">{prod.nombre}</h5>
-          <p class="card-text">{prod.precio}</p>
-          <button id= "botonCompra">Buy</button>
+    <div className="card" >
+        <div className="card-body">
+        <h5 className= "card-tittle">{producto.nombre}</h5>
+        <img src={producto.img}></img>
+          <p className="card-text">{producto.precio}</p>
+          <button className = "btn btn-primary">Buy</button>
         </div>
       </div>
     );
   }
 
-export default Item;
