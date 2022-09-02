@@ -1,13 +1,13 @@
 import ItemCount from './contador/ItemCount';
-import {Productos} from './ItemList'
+import {ItemList} from './ItemList'
 
 
 function ItemListContainer(props) {
   console.log(props.mensaje);
   const mensaje= props.mensaje;
     return (
-      <div className="container">
-        <p>{mensaje}</p>
+      <div className="d-flex justify-content-center">
+        <ItemList/>
     
         
       </div>

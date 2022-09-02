@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Item.css';
 //const cargarImagen= require.context(`../imagenes`,true)
 export const Item = ({producto}) => {
   const{id,nombre,precio,cantidad,img}=producto;

@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import getProducts from "../../helper/helpr";
-
+import './ItemDetail.css';
  const ItemDetail = () => {
     const [productos, setProductos] = useState([]);
 
@@ -19,11 +19,11 @@ return (
     <div className="item-container">
     <h1>Item Detail container</h1>
     {
-        <div className="item-detail">
+        <div className=" card item-detail">
             <img src= {img}></img>
             <h2>{nombre}</h2>
-            <h3>{precio}</h3>
-            <p>{cantidad}</p>
+            <h3>${precio}</h3>
+            <p>Stock:{cantidad}</p>
             
             </div>
     }
