@@ -1,5 +1,5 @@
 import ItemCount from './contador/ItemCount';
-import Item from './Item';
+import {Productos} from './ItemList'
 
 
 function ItemListContainer(props) {
@@ -9,7 +9,7 @@ function ItemListContainer(props) {
       <div className="container">
         <p>{mensaje}</p>
     
-    <ItemCount limit={0} stock={10}/>
+        
       </div>
     );
   }

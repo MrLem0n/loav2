@@ -1,11 +1,10 @@
 import React from "react";
-import ItemCount from './contador/ItemCount';
- 
+
 //const cargarImagen= require.context(`../imagenes`,true)
 export const Item = ({producto}) => {
     return (
       
-    <div className="card" >
+    <div className="card" key={producto.nombre}> 
         <div className="card-body">
         <h5 className= "card-tittle">{producto.nombre}</h5>
         <img src={producto.img}></img>
