@@ -1,9 +1,11 @@
-import {itemDetail} from './itemDetail/ItemDetail';
+import react from "react"
+import ItemDetail from "../ItemDetail/ItemDetail"
+ const ItemDetailContainer = ()=> {
 
-export const itemDetailContainer = ({producto})=> {
-
-    return <div className="d-flex">
-    <img src={producto.img}></img>
+    return <div className="d-flex justify-content-center">
+    <ItemDetail></ItemDetail>
 
     </div>
 }
+
+export default ItemDetailContainer
