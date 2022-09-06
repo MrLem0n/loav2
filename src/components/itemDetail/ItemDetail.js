@@ -1,11 +1,15 @@
 
-
-import './ItemDetail.css';
-
-export const ItemDetail = ()=> {
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
+export const ItemDetail = ({productos})=> {
 
      return <div className="d-flex justify-content-center">
-     <ItemDetailContainer productos={productos} />
+        <div className=" card item-detail">
+                <img src= {productos.img}></img>
+                <h2>{productos.nombre}</h2>
+                <h3>${productos.precio}</h3>
+                <p>Stock:{productos.cantidad}</p>
+                
+                </div>
 
      </div>
  }

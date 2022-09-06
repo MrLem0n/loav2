@@ -2,8 +2,9 @@ import react from "react"
 import './itemDet.css'
 import getProducts from "../../helper/helpr";
 import {useEffect, useState} from 'react'
+import {ItemDetail} from '../ItemDetail/ItemDetail'
 
-const ItemDetailContainer = (props) => {
+const ItemDetailContainer = () => {
     const [productos, setProductos] = useState([]);
     
     
@@ -16,11 +17,13 @@ const ItemDetailContainer = (props) => {
         },[])
     
     console.log(productos);
-    const{id,nombre,precio,cantidad,img}=productos;
+  
     return (
         <div className="item-container">
         <h1>Item Detail</h1>
         {
+        <ItemDetail productos={productos}></ItemDetail>
+        /* {
             <div className=" card item-detail">
                 <img src= {img}></img>
                 <h2>{nombre}</h2>
@@ -28,7 +31,7 @@ const ItemDetailContainer = (props) => {
                 <p>Stock:{cantidad}</p>
                 
                 </div>
-        }
+        } */}
         </div>
     )
     
