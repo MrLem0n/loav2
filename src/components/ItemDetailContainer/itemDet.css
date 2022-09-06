@@ -1,5 +1,8 @@
 .item-container{
-    margin-top:50px
+    margin-top:50px;
+    width:25%;
+    text-align:center;
+    margin-left: 40%;
 }
 .item-detail{
     background-color: rgb(232, 206, 60); ;

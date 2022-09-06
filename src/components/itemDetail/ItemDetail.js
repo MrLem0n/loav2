@@ -1,11 +1,13 @@
-import react from "react"
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer"
- const ItemDetail = ()=> {
 
-    return <div className="d-flex justify-content-center">
-    <ItemDetailContainer/>
 
-    </div>
-}
+import './ItemDetail.css';
 
-export default ItemDetail
+export const ItemDetail = ()=> {
+
+     return <div className="d-flex justify-content-center">
+     <ItemDetailContainer productos={productos} />
+
+     </div>
+ }
+
+
