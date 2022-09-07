@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import getProducts from "../helper/helpr";
+import {getProducts} from "../helper/helpr";
 import {Item} from "./Item";
 import { useParams } from "react-router-dom";
 

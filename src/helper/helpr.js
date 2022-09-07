@@ -6,7 +6,7 @@ import harmonyShardM from "../imagenes/Harmony Shard Pouch M.jpg"
 import hpPotion from "../imagenes/HP Potion.png"
 import MajorhpPotion from '../imagenes/Major HP Potion.png'
 import ElementalhpPotion from '../imagenes/Elemental HP Potion.jpg'
-const arregloProductos = [
+ const arregloProductos = [
     {
         id:0,   
         nombre: "Honor Shard Pouch (S)",
@@ -50,36 +50,39 @@ const arregloProductos = [
         categoria:'shards',
     },
     { id: 5,
-         nombre: "HP Potion",
-         precio : 56,
-         
-         cantidad: 50,
-         img : [hpPotion],
-         categoria:'pociones'
-      },
- { id: 6,
-         nombre: "Major HP Potion",
-         precio : 99,
-        
-         cantidad: 50,
-         img : [MajorhpPotion],
-         categoria:'pociones'
-      },
+        nombre: "HP Potion",
+        precio : 56,
+        cantidad: 50,
+        img : [hpPotion],
+        categoria:'pociones'
+    },
+{ id: 6,
+        nombre: "Major HP Potion",
+        precio : 99,
+        cantidad: 50,
+        img : [MajorhpPotion],
+        categoria:'pociones'
+    },
 { id: 7,
-         nombre: "Elemental HP Potion",
-         precio : 679,
-         
-         cantidad: 50,
-         img : [ElementalhpPotion],
-         categoria:'pociones'
-      },
+        nombre: "Elemental HP Potion",
+        precio : 679,
+        cantidad: 50,
+        img : [ElementalhpPotion],
+        categoria:'pociones'
+    },
     ]
 
-    const getProducts = new Promise((resolve, reject) => {
+   export const getProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(arregloProductos)
             reject(err => console.log(err))
         }, 3000)
     })
 
-    export default getProducts
+    export const getId = (productId) => {
+        return new Promise((resolve) => {
+            setTimeout(() =>{
+                resolve(arregloProductos.find(product => product.id === productId))
+            }, 3000)
+        })
+    }

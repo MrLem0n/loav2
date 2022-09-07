@@ -12,9 +12,10 @@ export const Item = ({producto}) => {
         <img src={img} alt='...'></img>
           <p className="card-text">Precio: ${precio}</p>
           <p>Stock: {cantidad}</p>
-          <Link to={`./producto/${id}`}>
-          <button className = "btn btn-primary">Ver detalle</button>
-          </Link>
+          <Link to={`/item/${id}`}>
+                <button className='boton-ver'>Ver detalle...</button>
+            </Link>
+        
         </div>
       </div>
     );
