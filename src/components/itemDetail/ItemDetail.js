@@ -1,13 +1,13 @@
 
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
-export const ItemDetail = ({productos})=> {
+export const ItemDetail = ({producto})=> {
 
      return <div className="d-flex justify-content-center">
         <div className=" card item-detail">
-                <img src= {productos.img}></img>
-                <h2>{productos.nombre}</h2>
-                <h3>${productos.precio}</h3>
-                <p>Stock:{productos.cantidad}</p>
+                <img src= {producto.img}></img>
+                <h2>{producto.nombre}</h2>
+                <h3>${producto.precio}</h3>
+                <p>Stock:{producto.cantidad}</p>
                 
                 </div>
 

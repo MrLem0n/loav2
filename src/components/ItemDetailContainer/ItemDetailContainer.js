@@ -3,8 +3,10 @@ import './itemDet.css'
 import getProducts from "../../helper/helpr";
 import {useEffect, useState} from 'react'
 import {ItemDetail} from '../ItemDetail/ItemDetail'
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
+    const {prodId} = useParams();
     const [productos, setProductos] = useState([]);
     
     
@@ -12,7 +14,7 @@ const ItemDetailContainer = () => {
         useEffect(()=>{
             getProducts.then(response =>
                 {
-                    setProductos(response.find(prod => prod.id === 0))
+                    setProductos(response.find(prod => prod.id === prodId))
                 })
         },[])
     
