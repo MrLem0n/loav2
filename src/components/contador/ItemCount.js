@@ -17,7 +17,7 @@ import {useState} from 'react';
             <button className=" btn btn-danger"  onClick={restarCantidad}>-</button>
            
         </div>
-         <btn className="btn btn-secondary" onClick={() => onAdd(cantidad)} ><b id= "boton-carrito">Agregar al carrito</b></btn>
+         <btn className="btn btn-secondary" onClick={() => onAdd(cantidad) } ><b id= "boton-carrito">Agregar al carrito</b></btn>
          </>
     )
 }

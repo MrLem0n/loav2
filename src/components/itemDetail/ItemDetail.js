@@ -10,6 +10,8 @@ export const ItemDetail = ({item})=> {
       setAdd(!add)
     }
 
+   
+
     return( 
     <>
     <div className="d-flex justify-content-center" id={id}>
@@ -19,7 +21,9 @@ export const ItemDetail = ({item})=> {
                <h3>${precio}</h3>
                <p>Stock:{stock}</p>
                
-               {   add ? "" :<ItemCount stock= {stock} onAdd={onAdd}/>}
+               {   add ? "" :<ItemCount stock= {stock} onAdd={onAdd}/>
+                  
+               }
                 
             
                 
@@ -28,9 +32,11 @@ export const ItemDetail = ({item})=> {
              
 
     </div>
-        <Link to={'/cart'}>
-    <btn className="btn btn-primary" style={{width:'100vh'}}>Finalizar compra</btn>
+     { !add ? "" :  <Link to={'/cart'}>
+    <btn className="btn btn-primary" style={{width:'100vh'}}
+   >Finalizar compra</btn>
     </Link>
+}
     </>
     )
 }

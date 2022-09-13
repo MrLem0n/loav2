@@ -3,7 +3,7 @@ import './Item.css';
 import {Link} from 'react-router-dom';
 //const cargarImagen= require.context(`../imagenes`,true)
 export const Item = ({producto}) => {
-  const{id,nombre,precio,cantidad,img}=producto;
+  const{id,nombre,precio,stock,img}=producto;
     return (
       
     <div className="card" key={id}  > 
@@ -11,7 +11,7 @@ export const Item = ({producto}) => {
         <h5 className= "card-tittle">{nombre}</h5>
         <img src={img} alt={nombre}></img>
           <p className="card-text">Precio: ${precio}</p>
-          <p>Stock: {cantidad}</p>
+          <p>Stock: {stock}</p>
           <Link to={`/item/${id}`}>
                 <button className='btn btn-primary'>Ver detalle...</button>
             </Link>
