@@ -2,12 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import CartWidget from "./icons/CartWidget";
+
 import {Link} from "react-router-dom";
 
 function Navbar() {
     return (
     <React.Fragment>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary" id="navbar">
         <div className="container-fluid">
         <Link className="navbar-brand" to="/">LOA Shop</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,6 +26,7 @@ function Navbar() {
             <li className="nav-item">
             <Link to="/Contacto" className="nav-link active ">Contacto</Link>
             </li>
+           
             <li className="nav-item">
                 <a className="nav-link" href="./galeria.html" >Galeria</a>
             </li>
@@ -37,8 +39,9 @@ function Navbar() {
                 <Link to='/category/pociones' className="dropdown-item">Pociones</Link>
                 </div>
             </li>
-            <li>
-                <CartWidget></CartWidget>
+            <li><Link to="/Cart">
+                <CartWidget ></CartWidget>
+                </Link>
             </li>
             </ul>
         </div>

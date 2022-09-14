@@ -1,86 +1,82 @@
 [{ "id": 0,
-   "nombre": "Honor Shard Pouch (S)",
-   "precio" : 9,
-   
-   "cantidad": 50,
-   "img" : "Honor Shard Pouch (S).png"
+"nombre": "Honor Shard Pouch (S)",
+"precio" : 9,
+
+"stock": 50,
+"img" : "Honor Shard Pouch (S).png"
 },
 { "id": 1,
-    "nombre": "Honor Shard Pouch (M)",
-    "precio" : 18,
-    
-    "cantidad": 50,
-    "img" : "Honor Shard Pouch (M).png"
- },
- { "id": 2,
-    "nombre": "Honor Shard Pouch (L)",
-    "precio" : 36,
-    
-    "cantidad": 50,
-    "img" : "Honor Shard Pouch (L).png"
- },
- { "id": 3,
-    "nombre": "Harmony Shard Pouch (S)",
-    "precio" : 42,
-    
-    "cantidad": 50,
-    "img" : "Harmony Shard Pouch (S).png"
- },
+"nombre": "Honor Shard Pouch (M)",
+"precio" : 18,
 
- {"id": 4,
-    "nombre": "Harmony Shard Pouch (M)",
-    "precio" : 85,
-    
-    "cantidad": 50,
-    "img" : "Harmony Shard Pouch (M).png"},
+"stock": 50,
+"img" : "Honor Shard Pouch (M).png"
+},
+{ "id": 2,
+"nombre": "Honor Shard Pouch (L)",
+"precio" : 36,
 
- {"id": 5,
-        "nombre": "Harmony Shard Pouch (L)",
-        "precio" : 123,
-        
-        "cantidad": 50,
-        "img" : "Harmony Shard Pouch (L).png"},
- { "id": 6,
-         "nombre": "HP Potion",
-         "precio" : 56,
-         
-         "cantidad": 50,
-         "img" : "HP Potion.png"
-      },
- { "id": 7,
-         "nombre": "Major HP Potion",
-         "precio" : 99,
-         
-         "cantidad": 50,
-         "img" : "Major HP Potion.png"
-      },
+"stock": 50,
+"img" : "Honor Shard Pouch (L).png"
+},
+{ "id": 3,
+"nombre": "Harmony Shard Pouch (S)",
+"precio" : 42,
+
+"stock": 50,
+"img" : "Harmony Shard Pouch (S).png"
+},
+
+{"id": 4,
+"nombre": "Harmony Shard Pouch (M)",
+"precio" : 85,
+
+"stock": 50,
+"img" : "Harmony Shard Pouch (M).png"},
+
+{"id": 5,
+"nombre": "Harmony Shard Pouch (L)",
+"precio" : 123,
+
+"stock": 50,
+"img" : "Harmony Shard Pouch (L).png"},
+{ "id": 6,
+"nombre": "HP Potion",
+"precio" : 56,
+
+"stock": 50,
+"img" : "HP Potion.png"
+},
+{ "id": 7,
+"nombre": "Major HP Potion",
+"precio" : 99,
+"stock": 50,
+"img" : "Major HP Potion.png"
+},
 { "id": 8,
-         "nombre": "Elemental HP Potion",
-         "precio" : 679,
-         
-         "cantidad": 50,
-         "img" : "Elemental HP Potion.png"
-      },
-      { "id": 9,
-         "nombre": "Star's Breath",
-         "precio" : 90,
-         
-         "cantidad": 50,
-         "img" : "Stars Breath.png"
-      },
-      { "id": 10,
-         "nombre": "Moon's Breath",
-         "precio" : 105,
-         
-         "cantidad": 50,
-         "img" : "Moons Breath.png"
-      },
-      { "id": 11,
-         "nombre": "Solar Protection",
-         "precio" : 900,
-         
-         "cantidad": 50,
-         "img" : "Solar Protection.png"
-      }
-        
+"nombre": "Elemental HP Potion",
+"precio" : 679,
+
+"stock": 50,
+"img" : "Elemental HP Potion.png"
+},
+{ "id": 9,
+"nombre": "Star's Breath",
+"precio" : 90,
+"stock": 50,
+"img" : "Stars Breath.png"
+},
+{ "id": 10,
+"nombre": "Moon's Breath",
+"precio" : 105,
+"stock": 50,
+"img" : "Moons Breath.png"
+},
+{ "id": 11,
+"nombre": "Solar Protection",
+"precio" : 900,
+"stock": 50,
+"img" : "Solar Protection.png"
+}
+
 ]

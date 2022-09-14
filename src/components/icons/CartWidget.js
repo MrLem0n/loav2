@@ -1,12 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus} from '@fortawesome/free-solid-svg-icons';
 
 
 function WidgetCart() {
     return (
       <>
-        <FontAwesomeIcon icon={faCartShopping}> </FontAwesomeIcon>
+    <FontAwesomeIcon icon={faCartPlus} />
       </>
     );
   }

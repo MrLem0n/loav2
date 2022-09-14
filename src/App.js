@@ -6,10 +6,17 @@ import ItemListContainer from './components/ItemListContainer'
 import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
 import {BrowserRouter, Routes,Route} from 'react-router-dom';
 import {Contacto} from './components/Pages/Contacto';
-import {Cart} from './components/Cart';
+import {CartContainer} from './components/CartContainer/CartContainer';
+import {CartProvider} from './components/Context/CartContext';
+
+
+
+
+
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
     <div className="App">
       <header className="App-header">
@@ -19,17 +26,15 @@ function App() {
           <Route path="/productos" element={<ItemListContainer/>}></Route>
           <Route path="/category/:category" element={<ItemListContainer/>}></Route>
           <Route path="/Contacto" element={<Contacto/>}></Route>
-          <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/cart" element={<CartContainer/>}></Route>
           <Route path="/item/:id" element={<ItemDetailContainer/>}></Route>
           </Routes>
-          {/* <ItemListContainer></ItemListContainer>
-          
-          <ItemDetail/> */}
       </header>
       
       
     </div>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 

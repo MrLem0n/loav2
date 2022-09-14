@@ -1,10 +1,10 @@
 import {useState} from 'react';
 
- const ItemCount = ({stock, onAdd}) => {
+const ItemCount = ({stock, onAdd}) => {
 
     const [cantidad, setCantidad] = useState(0);
-    const sumarCantidad = () => cantidad === stock ? setCantidad(stock) : setCantidad(cantidad + 1);
-    const restarCantidad = () => cantidad > 0 ? setCantidad(cantidad - 1) : setCantidad(0);
+    const sumarCantidad = () => cantidad === stock ? setCantidad(stock) : setCantidad(Number(cantidad + 1));
+    const restarCantidad = () => cantidad > 0 ? setCantidad(Number(cantidad - 1)) : setCantidad(0);
 
     return (
         <>
@@ -15,10 +15,10 @@ import {useState} from 'react';
         <p id="contar">{cantidad}</p>
 
             <button className=" btn btn-danger"  onClick={restarCantidad}>-</button>
-           
+
         </div>
-         <btn className="btn btn-secondary" onClick={() => onAdd(cantidad) } ><b id= "boton-carrito">Agregar al carrito</b></btn>
-         </>
+        <button  className="btn btn-secondary" onClick={() => onAdd(cantidad) } ><b id= "boton-carrito">Agregar al carrito</b></button>
+        </>
     )
 }
 
