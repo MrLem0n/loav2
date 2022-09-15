@@ -16,7 +16,7 @@ export const CartProvider = ({children})=>{
         
         if(isInCart(product.id)){
             const productIndex = productCartList.findIndex(element=>element.id===product.id);
-            newList[productIndex].qty = Number(newList[productIndex].quantity + product.qty);
+            newList[productIndex].cantidad = Number(newList[productIndex].cantidad + product.qty);
             newList[productIndex].totalPrice = Number(product.qty* newList[productIndex].precio);
             setProductCartList(newList)
         } else{

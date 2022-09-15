@@ -39,9 +39,9 @@ function Navbar() {
                 <Link to='/category/pociones' className="dropdown-item">Pociones</Link>
                 </div>
             </li>
-            <li><Link to="/Cart">
+            <li>
                 <CartWidget ></CartWidget>
-                </Link>
+                
             </li>
             </ul>
         </div>
