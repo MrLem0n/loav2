@@ -16,8 +16,9 @@ export const CartProvider = ({children})=>{
         
         if(isInCart(product.id)){
             const productIndex = productCartList.findIndex(element=>element.id===product.id);
-            newList[productIndex].cantidad = Number(newList[productIndex].cantidad + product.qty);
-            newList[productIndex].totalPrice = Number(product.qty* newList[productIndex].precio);
+            newList[productIndex].cantidad = Number(newList[productIndex].cantidad + qty);
+            newList[productIndex].totalPrice = newList[productIndex].cantidad * newList[productIndex].precio;
+        
             setProductCartList(newList)
         } else{
             const newProduct={...product, cantidad:qty, totalPrice: Number(qty *product.precio)}
@@ -38,13 +39,19 @@ export const CartProvider = ({children})=>{
         setProductCartList([])
     }
 
+    const getTotalPrice = ()=>{
+        return productCartList.reduce((acc, e) => acc + e.precio * e.cantidad, 0);
+
+
+    }
+
     const getTotalProducts = ()=>{
         const totalProducts = productCartList.reduce((acc,item)=>acc + item.cantidad,0);
         return totalProducts;
     }
 
     return(
-        <CartContext.Provider value={{productCartList,addProduct, removeProduct, clearProductCartList, isInCart, getTotalProducts}}>
+        <CartContext.Provider value={{productCartList,addProduct, removeProduct, clearProductCartList, isInCart, getTotalProducts,getTotalPrice}}>
             {children}
         </CartContext.Provider>
     )

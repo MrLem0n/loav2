@@ -5,8 +5,11 @@ import { CartItem } from '../CartItem/CartItem';
 import { Link } from 'react-router-dom';
 
 export const CartContainer = () => {
-  const {productCartList, clearProductCartList} = useContext(CartContext);
+  const {productCartList, clearProductCartList, } = useContext(CartContext);
 
+
+ 
+  
   return (
     <div className='container-fluid'>
       <p>CartContainer</p>
@@ -34,5 +37,5 @@ export const CartContainer = () => {
         }
       </div>
     </div>
-  )
+  );
 }
