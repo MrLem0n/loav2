@@ -13,7 +13,7 @@ function ItemListContainer() {
   useEffect(()=>{
     const getData = async()=>{
         try {
-            let queryRef = !category ? collection(dataBase,"Loascoll") :query(collection(dataBase,"Loascoll"),where("categoria","==",category));
+            const queryRef = collection(dataBase,"Loascoll")
             const response = await getDocs(queryRef);
             const datos = response.docs.map(doc=>{
                 const newDoc = {
@@ -22,6 +22,7 @@ function ItemListContainer() {
                 }
                 return newDoc;
             });
+            console.log("prods",datos);
             setProductos(datos)
         } catch (error) {
             console.log(error);
@@ -30,7 +31,7 @@ function ItemListContainer() {
     getData();
   
   },[category])
-
+ console.log("products",productos)
     return (
       <div className="item-list-container">
             <p>item list container</p>

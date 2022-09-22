@@ -9,10 +9,14 @@ import { useParams } from "react-router-dom";
 export const ItemList = ({items}) => {
     return(
         <div>
-        <div className="row">
-            {items.map((productos=>
-            <Item key={productos.id} items={productos}/>
-            ))}
+        <div className="container">
+            {
+            
+            items.map(producto=>(
+            <Item key={producto.id} item={producto}/>
+            ))
+        
+        }
         </div>
         </div>
     )
