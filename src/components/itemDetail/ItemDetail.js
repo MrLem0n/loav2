@@ -11,32 +11,24 @@ export const ItemDetail = ({item})=> {
 
   const {addProduct} = useContext(CartContext);
 
-    const [add,setAdd] = useState(0)
+  const [add,setAdd] = useState(0)
 
-    const {id,nombre,img,precio,stock} = item;
-    
     const onAdd = (cantidad) => {
-      
-      const newProduct={...item, quantity:cantidad}
-      
       addProduct(item,cantidad);
 
       setAdd(cantidad);
 
     }
-
-   
-
     return( 
     <>
-    <div className="d-flex justify-content-center" id={id}>
+    <div className="d-flex justify-content-center" >
        <div className=" card item-detail">
-              <img src= {img} alt={nombre}></img>
-              <h2>{nombre}</h2>
-              <h3>${precio}</h3>
-              <p>Stock:{stock}</p>
+              <img src= {item.img} alt={item.nombre}></img>
+              <h2>{item.nombre}</h2>
+              <h3>${item.precio}</h3>
+              <p>Stock:{item.stock}</p>
               
-              <ItemCount stock= {stock} onAdd={onAdd}/>
+              <ItemCount stock= {item.stock} onAdd={onAdd}/>
               </div>
 
 

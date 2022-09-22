@@ -6,14 +6,14 @@ import {ItemList} from './ItemList'
 
 
 function ItemListContainer() {
-  const category = useParams();
+  const {category} = useParams();
 
   const [productos, setProductos] = useState([]);
   
   useEffect(()=>{
     const getData = async()=>{
         try {
-            const queryRef = collection(dataBase,"Loascoll")
+            const queryRef = !category ? collection(dataBase,"Loascoll") : query(collection(dataBase,"Loascoll"),where("categoria","==",category));
             const response = await getDocs(queryRef);
             const datos = response.docs.map(doc=>{
                 const newDoc = {

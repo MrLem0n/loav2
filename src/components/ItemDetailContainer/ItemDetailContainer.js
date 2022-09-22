@@ -8,26 +8,25 @@ import { collection, getDocs, doc, getDoc } from "firebase/firestore";
 import dataBase from "../../utils/firebase";
 
 
-
 export const ItemDetailContainer = ()=>{
-    const {id} = useParams();
+    const {prodId} = useParams();
+
     const [item, setItem] = useState({});
 
-useEffect(()=>{
-    const getData = async()=>{
-        const query = collection(dataBase,"Loascoll")
 
-        const response = await getDocs(query);
-
-        const docs = response.docs;
-
-        const data = docs.map(doc =>{ return{...doc.data(),id:doc.id} })
-
-        setItem(data);
+    useEffect(()=>{
+        const queryRef = doc(dataBase,"Loascoll",prodId);
+        getDoc(queryRef).then(response=>{
+            const newDoc = {
+                ...response.data(),
+                id:response.id
+            }
+            console.log(newDoc)
+            setItem(newDoc);
+        }).catch(error=>console.log(error));
         
-    }
-    getData();
-},[id]);
+    },[prodId])
+
 
 return (
     <>
