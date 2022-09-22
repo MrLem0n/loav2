@@ -27,12 +27,10 @@ function App() {
           <Route path="/category/:category" element={<ItemListContainer/>}></Route>
           <Route path="/Contacto" element={<Contacto/>}></Route>
           <Route path="/cart" element={<CartContainer/>}></Route>
-          <Route path="/item/:id" element={<ItemDetailContainer/>}></Route>
+          <Route path="/item/:prodId" element={<ItemDetailContainer/>}></Route>
           <Route path="/firebase" element={<FirebasePage/>}></Route>
           </Routes>
       </header>
-      
-      
     </div>
     </BrowserRouter>
     </CartProvider>

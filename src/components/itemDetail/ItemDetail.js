@@ -28,7 +28,7 @@ export const ItemDetail = ({item})=> {
               <h3>${item.precio}</h3>
               <p>Stock:{item.stock}</p>
               
-              <ItemCount stock= {item.stock} onAdd={onAdd}/>
+              <ItemCount  onAdd={onAdd}/>
               </div>
 
 
