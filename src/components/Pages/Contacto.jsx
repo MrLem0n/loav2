@@ -1,35 +1,51 @@
 import React from 'react';
 import './pages.css';
+import { CartContext } from '../../Context/CartContext';
+import { useContext } from 'react';
+import dataBase from '../../utils/firebase';
+import { collection,addDoc } from 'firebase/firestore';
 export const Contacto= ()=>{
+  const {productCartList,getTotalPrice } = useContext(CartContext);
+ const sendOrder = (e)=> {
+   e.preventDefault();
+   const order = {
+     comprador: {
+  
+        nombre: e.target[1].value,
+        telefono: e.target[2].value,
+       email: e.target[3].value,
+       domicilio: e.target[4].value
+     },
+   items: productCartList,
+   precioFinal:getTotalPrice()
+   }
+   const queryRef = collection(dataBase,"ordenes");
+  addDoc(queryRef,order).then(response => console.log(response));
+   console.log(order)
+ }
     return(
         <div> <h1>Contacto</h1>
-        <form>
+        <form onSubmit={sendOrder}>
             <fieldset className="container-fluid">
-              <h2 className="text-center " >Dejanos tu mensaje</h2>
             <div className="row justify-content-center">
               
                 <div className=" col-12 col-lg-7 form-group">
-                <label for="exampleInputEmail1" className="form-label mt-4">Direccion de correo</label>
-                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduzca su email"/>
+                <input type="text" className="form-control" placeholder="Nombre"></input>
+                </div>
+                <div className=" col-12 col-lg-7 form-group">
+                <input type="text" className="form-control"  placeholder="Introduzca su telefono"/>
+                
+                <div className=" col-12 col-lg-7 form-group">
+                <input type="text" className="form-control" placeholder="email"></input>
+                </div>
                 <small id="emailHelp" className="form-text text-muted">Nunca compartiremos su email a nadie mas.</small>
+                
+                <div className=" col-12 col-lg-7 form-group">
+                <input type="text" className="form-control" placeholder="Domicilio"></input>
+                </div>
             </div>
-              <div clasName="col-12 col-lg-7 form-group">
-                <label for="exampleSelect1" className="form-label mt-4">seleccione su país</label>
-                <select className="form-select" id="exampleSelect1">
-                  <option>Argentina</option>
-                  <option>Peru</option>
-                  <option>Chile</option>
-                  <option>Colombia</option>
-                  <option>Paraguay</option>
-                </select>
-              </div>
-              <div className="col-12 col-lg-7 form-group">
-                <label for="mensaje" className="form-label mt-4">Su mensaje:</label>
-                <textarea className="form-control fluid" id="mensaje" rows="3"></textarea>
-                <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"/>
-                  <label className="form-check-label" for="flexSwitchCheckDefault">Deseo recibir actualizaciones por correo</label>
-              </div>
-              <button className="btn btn-primary" id="botoncito">Enviar</button>
+
+              <button type='submit' className="btn btn-primary" id="botoncito">Enviar</button>
             </div>
               </fieldset>
               </form>

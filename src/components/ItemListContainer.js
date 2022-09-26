@@ -33,7 +33,7 @@ function ItemListContainer() {
   },[category])
  console.log("products",productos)
     return (
-      <div className="item-list-container">
+      <div className="row item-list-container">
             <p>item list container</p>
             <ItemList items={productos}/>
        </div>

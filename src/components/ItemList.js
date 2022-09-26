@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 export const ItemList = ({items}) => {
     return(
         <div>
-        <div className="container d-flex">
+        <div className="d-flex justify-content-center">
             {
             
             items.map(producto=>(

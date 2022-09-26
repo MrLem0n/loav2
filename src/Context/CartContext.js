@@ -40,8 +40,8 @@ export const CartProvider = ({children})=>{
     }
 
     const getTotalPrice = ()=>{
-        return productCartList.reduce((acc, e) => acc + e.precio * e.cantidad, 0);
-
+       const finalPrice = productCartList.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+        return finalPrice;
 
     }
 
