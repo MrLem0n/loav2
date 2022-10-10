@@ -2,3 +2,19 @@
     margin-top: 100px;
     width: 50vw;
 }
+
+.container-imgs{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #da0f0f46;
+    color: white;
+    width: 100%;
+    height : auto
+}
+
+.img-fluid{
+    margin-top: 70px;
+    margin-left: 5px;
+}

@@ -18,23 +18,19 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarColor02">
             <ul className="navbar-nav me-auto">
             <li className="nav-item">
-                {/* <a className="nav-link active" href="../index.html">Inicio
-                <span className="visually-hidden">(current)</span>
-                </a> */}
                 <Link to="/" className="nav-link active ">Inicio</Link>
             </li>
             <li className="nav-item">
             <Link to="/Contacto" className="nav-link active ">Contacto</Link>
             </li>
-           
             <li className="nav-item">
-                <a className="nav-link" href="./galeria.html" >Galeria</a>
+                <a className="nav-link" href="./galeria" >Galeria</a>
             </li>
             
             <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
                 <div className="dropdown-menu">
-                {/* <a className="dropdown-item" href="./quienesSomos.html">Quienes somos</a> */}
+                
                 <Link to='/category/shards' className="dropdown-item">Shards</Link>
                 <Link to='/category/pociones' className="dropdown-item">Pociones</Link>
                 </div>

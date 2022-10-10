@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { collection, getDocs, query, where } from "firebase/firestore";
 import dataBase from '../utils/firebase'
 import {ItemList} from './ItemList'
-
+import './Item.css';
 
 function ItemListContainer() {
   const {category} = useParams();
@@ -33,8 +33,8 @@ function ItemListContainer() {
   },[category])
  console.log("products",productos)
     return (
-      <div className="row item-list-container">
-            <p>item list container</p>
+      <div className=" containerItems">
+            
             <ItemList items={productos}/>
        </div>
     

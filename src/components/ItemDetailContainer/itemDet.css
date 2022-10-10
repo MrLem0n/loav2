@@ -8,5 +8,13 @@
     background-color: rgb(232, 206, 60); ;
     margin-top: 50px;
     text-align: center;
-    
+    width: 25%;
+    color: black;
+}
+
+
+
+.detailContainer{
+    background-color:black;
+    color:white;
 }

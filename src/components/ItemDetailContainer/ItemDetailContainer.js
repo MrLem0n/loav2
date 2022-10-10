@@ -29,9 +29,9 @@ export const ItemDetailContainer = ()=>{
 
 
 return (
-    <>
-    <h1>ItemDetail</h1>
+    <div className="detailContainer">
+    <h1>Detalle del producto</h1>
     <ItemDetail item={item}></ItemDetail>
-    </>
+    </div>
 )
 }

@@ -23,7 +23,7 @@ export const ItemDetail = ({item})=> {
     <>
     <div className="d-flex justify-content-center" >
        <div className=" card item-detail">
-              <img src= {item.img} alt={item.nombre}></img>
+              <img src= {item.img} alt={item.nombre} style= {{marginTop:50, marginBottom:20}}></img>
               <h2>{item.nombre}</h2>
               <h3>${item.precio}</h3>
               <p>Stock:{item.stock}</p>
