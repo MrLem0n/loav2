@@ -2,7 +2,7 @@
 E-commerce orientado a la venta de items de un viedojuego
 
 ## NAVEGACION
-Placeholder de gif
+![Navegacion Loas](./src/imagenes/navegacion.gif)
 
 ## COMO USAR LA APP
 
@@ -16,3 +16,4 @@ una vez instalado, en la terminal de git o vsc ejecutar los siguientes comandos:
 - Bootsrap
 - React-router-DOM
 - FontAwesome
+
